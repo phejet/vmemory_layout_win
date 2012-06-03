@@ -10,6 +10,8 @@ namespace D3DTester
 
 	void createTempD3DTexture();
 
+	void createEmptyTexture( int sizeX, int sizeY );
+
 	void clearAllTempResources();
 }
 

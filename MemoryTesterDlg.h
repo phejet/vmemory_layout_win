@@ -31,4 +31,5 @@ protected:
 public:
 	afx_msg void OnBnClickedCreateonetexture();
 	afx_msg void OnBnClickedClearall();
+	afx_msg void OnBnClickedCreateemptytexture();
 };

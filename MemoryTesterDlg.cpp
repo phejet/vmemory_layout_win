@@ -37,6 +37,7 @@ BEGIN_MESSAGE_MAP(CMemoryTesterDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_CREATEONETEXTURE, &CMemoryTesterDlg::OnBnClickedCreateonetexture)
 	ON_BN_CLICKED(IDC_CLEARALL, &CMemoryTesterDlg::OnBnClickedClearall)
+	ON_BN_CLICKED(IDC_CREATEEMPTYTEXTURE, &CMemoryTesterDlg::OnBnClickedCreateemptytexture)
 END_MESSAGE_MAP()
 
 
@@ -113,4 +114,10 @@ void CMemoryTesterDlg::OnBnClickedCreateonetexture()
 void CMemoryTesterDlg::OnBnClickedClearall()
 {
 	D3DTester::clearAllTempResources();
+}
+
+
+void CMemoryTesterDlg::OnBnClickedCreateemptytexture()
+{
+	D3DTester::createEmptyTexture(512, 512);
 }

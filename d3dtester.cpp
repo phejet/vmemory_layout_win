@@ -95,6 +95,22 @@ void createTempD3DTexture()
 	gTempTextures.push_back(pTexture);
 }
 
+void createEmptyTexture(int sizeX, int sizeY)
+{
+	LPDIRECT3DTEXTURE9     pTexture = NULL;
+
+	if( FAILED( D3DXCreateTexture(gd3dDevice, sizeX, sizeY, 0, D3DUSAGE_AUTOGENMIPMAP,
+				D3DFMT_A8R8G8B8, D3DPOOL_MANAGED,&pTexture ) ) )
+	{
+		assert(0);
+		return;
+	}
+
+
+	gTempTextures.push_back(pTexture);
+}
+
+
 void clearAllTempResources()
 {
 	// clear VBs
